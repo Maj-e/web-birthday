@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background-image: url('cake.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white; /* Change the color of the text */
+        font-size: 20px; /* Change the size of the text */
+        font-weight: bold; /* Make the text bold */
+        
+    }
+    .hidden {
+        display: none;
+    }
+    body {
+        background-image: url('cake.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .hidden {
+        display: none;
+    }
+    div {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="section1">
+        <p>Como se llama el grupo que hace CTF ?  </p>
+        <input type="text" id="answer1" />
+        <button onclick="showSection2()">Next</button>
+        <p id="response1" class="hidden"></p>
+    </div>
+    <div id="section2" class="hidden">
+        <p>Q29tbyBzZSBsbGFtYSBlbCBwcmltZXIgY3RmIHF1ZSBoaWNpZXJvbg==</p>
+        <input type="text" id="answer2" />
+        <button onclick="showSection3()">Next</button>
+        <p id="response2" class="hidden"></p>
+    </div>
+    <div id="section3" class="hidden">
+        <p>𝕰𝖓𝖍𝖔𝖗𝖆𝖇𝖚𝖊𝖓𝖆 ! M𝖏𝖊𝖆𝖓𝖓𝖎𝖓 𝖙𝖎𝖊𝖓𝖊 𝖚𝖓 A𝖕𝖔𝖉𝖔. 𝕷𝖔 𝖈𝖔𝖓𝖔𝖈𝖊𝖘 ? 𝕰𝖘 𝖒𝖎 𝖚𝖑T𝖎𝖒𝖆 𝖕𝖗𝖊𝖌𝖚𝖓TA</p>
+        <input type="text" id="answer3" />
+        <button onclick="showSection4()">Next</button>
+        <p id="response3" class="hidden"></p>
+    </div>
+    <div id="section4" class="hidden">
+        <p>Ahora que tienes el año, como añadirias un año a este chabal en C ?</p>
+        <input type="text" id="answer4" />
+        <button onclick="showResponse4()">Validate</button>
+        <p id="response4" class="hidden"></p>
+    </div>
+
+    <script>
+        function showSection2() {
+            var answer1 = document.getElementById('answer1').value;
+            if(answer1 === 'Cluster4') {
+                document.getElementById('section2').classList.remove('hidden');
+                document.getElementById('response1').textContent = '1';
+                document.getElementById('response1').classList.remove('hidden');
+            }
+        }
+
+        function showSection3() {
+            var answer2 = document.getElementById('answer2').value;
+            if(answer2 === 'Hades CTF') {
+                document.getElementById('section3').classList.remove('hidden');
+                document.getElementById('response2').textContent = '99';
+                document.getElementById('response2').classList.remove('hidden');
+            }
+        }
+
+        function showSection4() {
+            var answer3 = document.getElementById('answer3').value;
+            if(answer3 === 'Matta') {
+                document.getElementById('section4').classList.remove('hidden');
+                document.getElementById('response3').textContent = '5';
+                document.getElementById('response3').classList.remove('hidden');
+            }
+        }
+
+        function showResponse4() {
+            var answer4 = document.getElementById('answer4').value;
+            if(answer4 === '28++;') {
+                document.getElementById('response4').textContent = 'Lets goooooo (puedes comer)';
+                document.getElementById('response4').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
