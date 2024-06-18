@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cumple Matteo</title>
     <style>
     body {
         background-image: url('cake.jpg');
@@ -17,9 +17,9 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: white; /* Change the color of the text */
-        font-size: 20px; /* Change the size of the text */
-        font-weight: bold; /* Make the text bold */
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
         
     }
     .hidden {
@@ -52,9 +52,14 @@
     }
     </style>
 </head>
+
+<audio id="background-music" src="musica.mp4" type="audio/mpeg" autoplay loop>
+    Your browser does not support the audio element.
+</audio>
+
 <body>
     <div id="section1">
-        <p>Como se llama el grupo que hace CTF ?  </p>
+        <p>Cuantos integrantes hay en la liga de ciber ?  </p>
         <input type="text" id="answer1" />
         <button onclick="showSection2()">Next</button>
         <p id="response1" class="hidden"></p>
@@ -72,38 +77,47 @@
         <p id="response3" class="hidden"></p>
     </div>
     <div id="section4" class="hidden">
-        <p>Ahora que tienes el año, como añadirias un año a este chabal en C ?</p>
+        <p>Ahora que tienes la edad con la fecha de nacimiento, como añadirias un año a este chaval en C ?</p>
         <input type="text" id="answer4" />
         <button onclick="showResponse4()">Validate</button>
         <p id="response4" class="hidden"></p>
     </div>
-
+    <div id="countdown">03:00</div>
+    
     <script>
         function showSection2() {
             var answer1 = document.getElementById('answer1').value;
-            if(answer1 === 'Cluster4') {
+            if(answer1 === '265') {
                 document.getElementById('section2').classList.remove('hidden');
-                document.getElementById('response1').textContent = '1';
+                document.getElementById('response1').textContent = '19';
                 document.getElementById('response1').classList.remove('hidden');
-            }
+            }  else {
+            alert("El canal de la liga puede tener la solución...");
+        }
         }
 
         function showSection3() {
             var answer2 = document.getElementById('answer2').value;
-            if(answer2 === 'Hades CTF') {
+            if(answer2 === 'Hades') {
                 document.getElementById('section3').classList.remove('hidden');
-                document.getElementById('response2').textContent = '99';
+                document.getElementById('response2').textContent = '06';
                 document.getElementById('response2').classList.remove('hidden');
             }
+            else {
+            alert("¿Perteneces a una coalición?");
+        }
         }
 
         function showSection4() {
             var answer3 = document.getElementById('answer3').value;
             if(answer3 === 'Matta') {
                 document.getElementById('section4').classList.remove('hidden');
-                document.getElementById('response3').textContent = '5';
+                document.getElementById('response3').textContent = '1995';
                 document.getElementById('response3').classList.remove('hidden');
             }
+            else {
+                alert("MIRA LAS LETRAS DIFERENTES");
+        }
         }
 
         function showResponse4() {
@@ -112,7 +126,51 @@
                 document.getElementById('response4').textContent = 'Lets goooooo (puedes comer)';
                 document.getElementById('response4').classList.remove('hidden');
             }
+            else {
+            alert("El número no es mayor que 25");
+        }
         }
     </script>
+    <script>
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+        }
+    };
+
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    }, false);
+</script>
+
+<script>
+    var countdownElement = document.getElementById('countdown');
+    var totalSeconds = 180; // 3 minutes
+
+    var countdownInterval = setInterval(function() {
+        totalSeconds--;
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+
+        countdownElement.textContent = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
+        if (totalSeconds <= 0) {
+            clearInterval(countdownInterval);
+            location.reload();
+        }
+    }, 1000);
+</script>
 </body>
 </html>
