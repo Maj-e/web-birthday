@@ -1,5 +1,48 @@
-Enhorabuena ! Mjeannin tiene un apodo. tu lo conoces ? Es mi ultima pregunta
 
-𝕰𝖓𝖍𝖔𝖗𝖆𝖇𝖚𝖊𝖓𝖆 ! M𝖏𝖊𝖆𝖓𝖓𝖎𝖓 𝖙𝖎𝖊𝖓𝖊 𝖚𝖓 a𝖕𝖔𝖉𝖔. 𝕷𝖔 𝖈𝖔𝖓𝖔𝖈𝖊𝖘 ? 𝕰𝖘 𝖒𝖎 𝖚𝖑t𝖎𝖒𝖆 𝖕𝖗𝖊𝖌𝖚𝖓ta
 
-𝕰𝖓𝖍𝖔𝖗𝖆𝖇𝖚𝖊𝖓𝖆 ! 𝕸𝖏𝖊𝖆𝖓𝖓𝖎𝖓 𝖙𝖎𝖊𝖓𝖊 𝖚𝖓 𝖆𝖕𝖔𝖉𝖔. 𝕷𝖔 𝖈𝖔𝖓𝖔𝖈𝖊𝖘 ? 𝕰𝖘 𝖒𝖎 𝖚𝖑𝖙𝖎𝖒𝖆 𝖕𝖗𝖊𝖌𝖚𝖓𝖙𝖆
+
+1 - OSINT
+
+Quien lleva la direccion de 42 ?
+
+flag{SophieViger}
+
+OSINT (Open Source Intelligence) es la recopilación y análisis de INFORMACIÓN 
+obtenida de fuentes públicas y accesibles, como redes sociales, medios de comunicación, 
+bases de datos en línea, foros, sitios web, entre otros. Esta INFORMACIÓN, aunque esté disponible de manera abierta,
+se organiza y se procesa para obtener inteligencia útil en áreas como la seguridad, 
+la investigación criminal, el análisis geopolítico y la ciberseguridad.
+El objetivo del OSINT es utilizar datos abiertos 
+para apoyar la toma de decisiones sin recurrir a métodos clandestinos.
+
+
+
+2 - Cryptografia - resolver un cifrado con cyberchef
+
+ZmxhZ3tDb29raW5nQ29va2llczRSb29raWVzfQ==
+
+flag{CookingCookies4Rookies}
+
+El cifrado es un proceso que transforma datos o INFORMACIÓN en un
+formato ilegible para proteger su contenido. Utiliza algoritmos y claves
+matemáticas para convertir el texto claro en texto cifrado o "código", de manera que solo quienes tienen
+la clave correcta puedan descifrarlo y acceder a la INFORMACIÓN original. Es una técnica clave en seguridad digital
+para proteger datos sensibles, como contraseñas, comunicaciones o transacciones.
+
+
+
+3 - Stenographia
+
+
+
+La esteganografía es una técnica de ocultación de INFORMACIÓN dentro de otro
+tipo de archivo o medio de manera que el mensaje secreto pase desapercibido a simple vista. 
+A diferencia del cifrado, que transforma el mensaje en un formato ilegible,
+la esteganografía busca esconder la existencia misma del mensaje.
+
+
+4 - ?????
+
+flag{INFORMACIÓN}
+
+
