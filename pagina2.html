@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicación del Cifrado</title>
+    <title>K1CK_0FF</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Epson;
-            background-image: url('purple.jpg');
+            font-family: Arial, sans-serif;
+            background-image: url('yellow.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: rgb(0, 0, 0);
+            color: rgb(106, 255, 0);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -26,7 +26,7 @@
             box-sizing: border-box;
             max-width: 90%;
             word-wrap: break-word;
-            background-color: rgba(65, 253, 18, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             font-size: 1.5em;
             display: none;
             justify-content: center;
@@ -38,8 +38,8 @@
             padding: 10px 20px;
             font-size: 1em;
             cursor: pointer;
-            background-color: #73e600;
-            color: rgb(123, 10, 171);
+            background-color: #000000;
+            color: rgb(255, 208, 0);
             border: none;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,18 +50,33 @@
             background-color: #0056b3;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
+        .download-link {
+            margin: 20px 0;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <button onclick="toggleContent('content1')">Cryptographia</button>
+    <button onclick="toggleContent('content2')">Stenographia</button>
+
     <div class="content" id="content1">
         El cifrado es un proceso que transforma datos o información en un formato ilegible para proteger su contenido. Utiliza algoritmos y claves matemáticas para convertir el texto claro en texto cifrado o "código", de manera que solo quienes tienen la clave correcta puedan descifrarlo y acceder a la información original. Es una técnica clave en seguridad digital para proteger datos sensibles, como contraseñas, comunicaciones o transacciones.
     </div>
 
-    <button onclick="toggleContent('content2')">Stenographia</button>
     <div class="content" id="content2">
         La esteganografía es una técnica de ocultación de información dentro de otro tipo de archivo o medio de manera que el mensaje secreto pase desapercibido a simple vista. A diferencia del cifrado, que transforma el mensaje en un formato ilegible, la esteganografía busca esconder la existencia misma del mensaje.
     </div>
+
+    <input type="text" id="answer" placeholder="Escribe tu respuesta aquí">
+    <button onclick="checkAnswer()">Comprobar Respuesta</button>
+    <button id="nextButton" class="hidden">Siguiente</button>
+
+    <a href="brain.jpg" download class="download-link">
+        <img src="brain.jpg" alt="Brain" style="max-width: 100px; border: 2px solid white; border-radius: 5px;">
+    </a>
 
     <script>
         function toggleContent(contentId) {
@@ -70,6 +85,16 @@
                 content.style.display = 'flex';
             } else {
                 content.style.display = 'none';
+            }
+        }
+
+        function checkAnswer() {
+            var answer = document.getElementById('answer').value;
+            var nextButton = document.getElementById('nextButton');
+            if (answer.toLowerCase() === 'correcta') { // Replace 'correcta' with the correct answer
+                nextButton.classList.remove('hidden');
+            } else {
+                alert('Respuesta incorrecta. Inténtalo de nuevo.');
             }
         }
     </script>

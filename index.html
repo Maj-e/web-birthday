@@ -6,26 +6,6 @@
     <title>K1CK_0FF</title>
     <style>
     body {
-        background-image: url('feria.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        
-    }
-    .hidden {
-        display: none;
-    }
-    body {
         background-image: url('purple.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -37,16 +17,17 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: white;
+        color: rgb(0, 255, 30);
         font-size: 20px;
         font-weight: bold;
     }
     .hidden {
         display: none;
     }
+
     div {
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(116, 0, 178, 0.5);
         padding: 10px;
         border-radius: 5px;
     }
@@ -105,18 +86,6 @@
             }
             else {
             alert("¿Perteneces a una coalición?");
-        }
-        }
-
-        function showSection4() {
-            var answer3 = document.getElementById('answer3').value;
-            if(answer3 === '420') {
-                document.getElementById('section4').classList.remove('hidden');
-                document.getElementById('response3').textContent = '1995';
-                document.getElementById('response3').classList.remove('hidden');
-            }
-            else {
-                alert("MIRA LAS LETRAS DIFERENTES");
         }
         }
 
